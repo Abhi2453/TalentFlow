@@ -72,6 +72,47 @@ src/
 - `npm run lint` - Run ESLint
 - `npm test` - Run tests
 
+## Deployment
+
+### Building for Production
+
+1. Create a production build:
+```bash
+npm run build
+```
+
+2. Preview the production build locally:
+```bash
+npm run preview
+```
+
+### Deploying to Vercel
+
+1. Install Vercel CLI globally:
+```bash
+npm install -g vercel
+```
+
+2. Login to Vercel:
+```bash
+vercel login
+```
+
+3. Deploy the application:
+```bash
+vercel
+```
+
+4. For subsequent deployments:
+```bash
+vercel --prod
+```
+
+Environment Variables required:
+- `VITE_API_URL`: Your backend API URL
+- `VITE_AUTH_DOMAIN`: Authentication domain (if using auth service)
+- `VITE_APP_ENV`: Production/Development environment
+
 ## Contributing
 
 1. Fork the repository
