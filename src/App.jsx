@@ -13,7 +13,7 @@ import Assessments from './pages/Assessments'
 const App = () => {
   
   return (
-      <div>It works!</div>
+      
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
