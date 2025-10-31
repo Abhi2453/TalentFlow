@@ -6,10 +6,9 @@ import "./index.css";
 
 // ✅ Conditionally start MirageJS mock server (only in development)
 async function enableMocking() {
-  if (import.meta.env.DEV) {
-    const { startServer } = await import("./server/server");
-    await startServer();
-  }
+  // 🟢 Run Mirage in both dev & production if no real backend
+  const { startServer } = await import("./server/server");
+  await startServer();
 }
 
 // ✅ Start Mirage only in dev, then mount React app
