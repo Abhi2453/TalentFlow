@@ -1,29 +1,40 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import path from 'path';
+
+// ✅ Vite configuration for React + Tailwind + Vercel
 export default defineConfig({
-  plugins: [react(),tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+
+  // ✅ Ensures correct paths when deployed on Vercel or static hosts
   base: '/',
+
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: false, // set true if you need source maps for debugging
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
-          charts: ['recharts']
-        }
-      }
-    }
+        },
+      },
+    },
   },
+
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
+
+  // ✅ Local dev server configuration
   server: {
     port: 5173,
-    proxy: {
-      '/api': {
-        target: process.env.VITE_API_URL,
-        changeOrigin: true,
-        secure: false
-      }
-    }
-  }
-})
+    open: true,
+  },
+});
