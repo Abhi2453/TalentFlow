@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap-icons";
 import JobsByStatus from "./JobByStatus";
 import CandidatesByStatus from "./CandidatesByStatus.jsx";
-import Header from "../components/common/header.jsx";
+import Header from "../components/common/Header.jsx";
 import DashboardMobile from "./DashboardMobile";
 
 const Dashboard = () => {
