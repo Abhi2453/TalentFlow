@@ -47,7 +47,7 @@ export default function Footer() {
         </a>
         {/* GitHub */}
         <a
-          href="https://github.com/Abhi2453"
+          href="https://github.com/22je0249"
           aria-label="Github"
           className="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
         >
@@ -62,7 +62,7 @@ export default function Footer() {
         </a>
         {/* Dribbble */}
       <a
-  href="mailto:lohitgangiredla@gmail.com"
+  href="mailto:bheemunipavankumar93@gmail.com"
   aria-label="Gmail"
   className="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
 >
